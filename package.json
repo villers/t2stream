@@ -1,0 +1,33 @@
+{
+  "name": "t2stream",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/villers/t2stream.git"
+  },
+  "keywords": [
+    "webtorrent"
+  ],
+  "author": "didier_f,viller_m",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/villers/t2stream/issues"
+  },
+  "homepage": "https://github.com/villers/t2stream#readme",
+    "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-typescript": "^2.9.2",
+    "gulp-watch": "^4.3.5",
+    "typescript": "^1.6.2"
+  }
+}
