@@ -10,7 +10,7 @@ module.exports = function () {
     ])
     .pipe(sourcemaps.init())
     .pipe(typescript({
-        module: 'node'
+        module: 'CommonJS'
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/'));

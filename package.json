@@ -23,10 +23,17 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
+    "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-plumber": "^1.0.1",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.1.0",
     "gulp-typescript": "^2.9.2",
+    "gulp-watch": "^4.3.5",
+    "ripe": "^0.2.1",
     "run-sequence": "^1.1.4"
   }
 }
