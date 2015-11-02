@@ -1,5 +1,16 @@
 /// <reference path="./server.d.ts" />
 
-var toto = () => {
-    console.log('toto');
-};
+import express = require("express");
+import path = require("path");
+
+var app : express.Express = express();
+
+app.get("/", (req, res) => {
+   res.send("Hello World"); 
+});
+
+var port: number = process.env.PORT || 3000;
+var server = app.listen(port, () => {
+    var listenPort : number = server.address().port;
+    console.log("The server is listening on port " + listenPort);
+});
