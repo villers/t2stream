@@ -1,10 +1,10 @@
 # t2stream
 
 ## how to build
-`git clone https://github.com/villers/t2stream`
-`cd t2stream`
-`npm install`
-`gulp build --production`
+* `git clone https://github.com/villers/t2stream`
+* `cd t2stream`
+* `npm install`
+* `gulp build --production`
 
 
 ## gulp tasks
