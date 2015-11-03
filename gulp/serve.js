@@ -14,8 +14,9 @@ var openOpts = {
 module.exports = {
     nodemon: function (cb) {
         return nodemon({
-            script: 'dist/index.js',
-            ext: 'js'
+            script: 'index.js',
+            ext: 'js',
+            cwd : 'dist'
         })
         .on('start', function () {
             if (!openOpts.already) {

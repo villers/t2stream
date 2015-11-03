@@ -7,7 +7,7 @@
     ],
     "tasks": [
         {
-            "taskName": "typescript-server",
+            "taskName": "typescript",
             "isBuildCommand": true,
             "showOutput": "always"
         }

@@ -5,9 +5,7 @@ import path = require('path');
 
 var app : express.Express = express();
 
-app.get('/', (req, res) => {
-   res.send('Hello World');
-});
+app.use(express.static('public'));
 
 var port: number = process.env.PORT || 4444;
 var server: any = app.listen(port, () => {
