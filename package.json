@@ -37,6 +37,7 @@
     "gulp-typescript": "^2.9.2",
     "gulp-watch": "^4.3.5",
     "ripe": "^0.2.1",
-    "run-sequence": "^1.1.4"
+    "run-sequence": "^1.1.4",
+    "tsd": "^0.6.5"
   }
 }
