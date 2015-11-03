@@ -3,12 +3,13 @@
 var gulp        = require('gulp');
 var typescript  = require('gulp-typescript');
 var sourcemaps  = require('gulp-sourcemaps');
-var path = require("path");
+var argv        = require('yargs').argv;
+var gulpif      = require('gulp-if');
 
 module.exports = function () {
     return gulp.src(['src/server/**/*.ts'])
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!argv.production, sourcemaps.init()))
     .pipe(typescript({ module: 'commonjs' }))
-    .pipe(sourcemaps.write({includeContent: false, sourceRoot: "../src/server"}))
+    .pipe(gulpif(!argv.production, sourcemaps.write({includeContent: false, sourceRoot: "../src/server"})))
     .pipe(gulp.dest('dist/'));
 };
