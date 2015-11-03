@@ -13,5 +13,5 @@ module.exports = function () {
             sort: true,
             bell: true,
             fullPath: true
-        }))
+        }));
 };
