@@ -6,38 +6,29 @@ var nodemon    = require('gulp-nodemon');
 var bsync      = require('browser-sync');
 
 var port = process.env.PORT || 4444;
-var openOpts = {
-    url: 'http://localhost:' + port,
-    already: false
-};
 
 module.exports = {
     nodemon: function (cb) {
+        var started = false;
+
         return nodemon({
             script: 'index.js',
-            ext: 'js',
-            cwd : 'dist'
+            watch: ['dist/index.js']
         })
-        .on('start', function () {
-            if (!openOpts.already) {
-                openOpts.already = true;
-                ripe.wait(cb);
-            } else {
-                ripe.wait(function () {
-                    bsync.reload({ stream: false });
-                });
-            }
+        .once('start', cb)
+        .on('restart', function onRestart() {
+          setTimeout(function reload() {
+            bsync.reload({
+              stream: false
+            });
+          }, 500);
         });
     },
     bsync: function () {
-        bsync.init({
-            proxy: 'localhost:9000',
-            browser: process.env.BROWSER || 'google chrome',
-            online: false,
-            notify: false,
-            watchOptions: {
-                interval: 500
-            }
+        bsync.init(null, {
+            proxy: 'http://localhost:' + port,
+            browser: "google chrome",
+            port: 7000
         });
     }
 };

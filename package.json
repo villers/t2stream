@@ -2,7 +2,7 @@
   "name": "t2stream",
   "version": "0.0.0",
   "description": "",
-  "main": "app/app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,7 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
+    "bower": "^1.6.5",
     "browser-sync": "^2.9.11",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
@@ -40,7 +41,7 @@
     "gulp-tslint-stylish": "^1.1.1",
     "gulp-typescript": "^2.9.2",
     "gulp-watch": "^4.3.5",
-    "i": "^0.3.3",
+    "main-bower-files": "^2.9.0",
     "ripe": "^0.2.1",
     "run-sequence": "^1.1.4",
     "tsd": "^0.6.5",

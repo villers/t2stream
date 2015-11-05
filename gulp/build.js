@@ -8,7 +8,7 @@ module.exports = function () {
     .pipe(flatten())
     .pipe(gulp.dest('dist/'));
 
-    return gulp.src(['src/client/**/*', '!src/client/**/*.ts', '!src/client/**/*.styl'])
+    return gulp.src(['src/client/**/*', '!src/client/**/*.ts', '!src/client/**/*.styl', '!src/client/index.html'])
     .pipe(flatten())
     .pipe(gulp.dest('dist/public'));
 };

@@ -4,11 +4,10 @@ import express = require('express');
 import path = require('path');
 
 var app : express.Express = express();
-
-app.use(express.static('public'));
+app.use(express.static(process.cwd() + '/dist/public/'));
 
 var port: number = process.env.PORT || 4444;
 var server: any = app.listen(port, () => {
     var listenPort : number = server.address().port;
-    console.log('The server is listening on port ' + listenPort);
+    console.log('The server is listening on port: ' + listenPort);
 });
