@@ -1,0 +1,1 @@
+/// <reference path="bootable/bootable.d.ts" />
