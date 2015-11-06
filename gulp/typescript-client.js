@@ -10,11 +10,11 @@ var gulpif      = require('gulp-if');
 
 
 module.exports = function () {
-    return gulp.src(['src/client/**/*.ts'])
+    return gulp.src([__dirname + '/../src/client/**/*.ts'])
     .pipe(gulpif(!argv.production, sourcemaps.init()))
     .pipe(typescript({ sortOutput: true }))
     .pipe(concat('app.js'))
     .pipe(gulpif(argv.production, ngAnnotate()))
     .pipe(gulpif(!argv.production, sourcemaps.write()))
-    .pipe(gulp.dest('dist/public/'));
+    .pipe(gulp.dest(__dirname + '/../dist/public/'));
 };

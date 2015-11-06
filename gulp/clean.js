@@ -3,5 +3,5 @@
 var del     = require('del');
 
 module.exports = function () {
-    return del(['dist/']);
+    return del([__dirname + '/../dist/']);
 };

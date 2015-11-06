@@ -5,10 +5,11 @@ var mainBowerFiles  = require('main-bower-files');
 var inject          = require('gulp-inject');
 
 module.exports = function () {
-    gulp.src(mainBowerFiles(), { base: 'bower_components' })
-        .pipe(gulp.dest('./dist/public/bower_components'));
+    var path = { paths: __dirname + '/..' };
+    gulp.src(mainBowerFiles(path), { base: 'bower_components' })
+        .pipe(gulp.dest(__dirname + '/../dist/public/bower_components'));
     
-    return gulp.src('src/client/index.html')
-        .pipe(inject(gulp.src(mainBowerFiles(), {read: false}), {name: 'bower'}))
-        .pipe(gulp.dest('dist/public'));
+    return gulp.src(__dirname + '/../src/client/index.html')
+        .pipe(inject(gulp.src(mainBowerFiles(path), {read: false}), {name: 'bower'}))
+        .pipe(gulp.dest(__dirname + '/../dist/public'));
 };

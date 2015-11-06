@@ -9,11 +9,11 @@ var argv        = require('yargs').argv;
 var gulpif      = require('gulp-if');
 
 module.exports = function () {
-    return gulp.src('src/client/**/*.styl')
+    return gulp.src(__dirname + '/../src/client/**/*.styl')
         .pipe(gulpif(!argv.production, sourcemaps.init()))
         .pipe(plumber())
         .pipe(stylus())
         .pipe(gulpif(!argv.production, sourcemaps.write()))
-        .pipe(gulp.dest('dist/public'))
+        .pipe(gulp.dest(__dirname + '/../dist/public'))
         .pipe(bsync.reload({ stream: true }));
 };

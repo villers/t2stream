@@ -6,7 +6,7 @@ var stylish = require('gulp-tslint-stylish');
 
 
 module.exports = function () {
-    return gulp.src(['src/**/*.ts'])
+    return gulp.src([__dirname + '/../src/**/*.ts'])
         .pipe(tslint())
         .pipe(tslint.report(stylish, {
             emitError: false,

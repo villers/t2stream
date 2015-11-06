@@ -1,5 +1,3 @@
 /// <reference path="./client.d.ts" />
 
-var toto = () => {
-    console.log('toto');
-};
+angular.module('t2stream', []);

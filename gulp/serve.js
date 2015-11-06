@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp       = require('gulp');
-var ripe       = require('ripe');
 var nodemon    = require('gulp-nodemon');
 var bsync      = require('browser-sync');
 
@@ -9,12 +8,11 @@ var port = process.env.PORT || 4444;
 
 module.exports = {
     nodemon: function (cb) {
-        var started = false;
-        console.log(__dirname);
         return nodemon({
             verbose: true,
             script: 'index.js',
-            watch: ['index.js'],
+            watch: ['**/*.js'],
+            ignore: ['public'],
             cwd: __dirname + '/../dist/'
         })
         .once('start', cb)
