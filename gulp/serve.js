@@ -10,10 +10,12 @@ var port = process.env.PORT || 4444;
 module.exports = {
     nodemon: function (cb) {
         var started = false;
-
+        console.log(__dirname);
         return nodemon({
+            verbose: true,
             script: 'index.js',
-            watch: ['dist/index.js']
+            watch: ['index.js'],
+            cwd: __dirname + '/../dist/'
         })
         .once('start', cb)
         .on('restart', function onRestart() {
