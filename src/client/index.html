@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="t2stream">
+<html ng-app="t2stream" ng-strict-di>
 <head>
     <title>t2stream</title>
     <meta charset="utf-8">
@@ -11,13 +11,12 @@
     <!-- endinject -->
 </head>
 <body>
-
-    <h1>t2stream</h1>
-    <div ui-view="app"></div>
+    <div ui-view></div>
 
     <!-- bower:js -->
     <!-- bower installed scripts will go here... -->
     <!-- endinject -->
     <script src="app.js"></script>
+    <script src="templates.js"></script>
 </body>
 </html>

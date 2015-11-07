@@ -8,8 +8,8 @@ var gulpif      = require('gulp-if');
 
 module.exports = function () {
     return gulp.src([__dirname + '/../src/server/**/*.ts'])
-    .pipe(gulpif(!argv.production, sourcemaps.init()))
-    .pipe(typescript({ module: 'commonjs' }))
-    .pipe(gulpif(!argv.production, sourcemaps.write({includeContent: false, sourceRoot: "../src/server"})))
-    .pipe(gulp.dest(__dirname + '/../dist/'));
+        .pipe(gulpif(!argv.production, sourcemaps.init()))
+        .pipe(typescript({ module: 'commonjs' }))
+        .pipe(gulpif(!argv.production, sourcemaps.write({includeContent: false, sourceRoot: "../src/server"})))
+        .pipe(gulp.dest(__dirname + '/../dist/'));
 };
