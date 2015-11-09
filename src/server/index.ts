@@ -4,10 +4,14 @@ import express = require('express');
 import path = require('path');
 import bootable = require('bootable');
 import http = require('http');
+import IoC = require('electrolyte');
 
 var port: number = process.env.PORT || 4444;
 
 var appBootable : express.Express & Bootable.bootable<express.Express> = bootable(express());
+
+appBootable.phase(bootable.initializers('init/'));
+
 appBootable.phase(bootable.routes('route.js'));
 
 appBootable.phase(() => {
@@ -18,8 +22,9 @@ appBootable.phase(() => {
 });
 
 appBootable.boot((err) => {
+    var lama = IoC.create('database');
     if (err) {
-        console.log('Something went wrong');
+        console.log('Something went wrong ' + JSON.stringify(err));
     } else {
         console.log('Application Started');
     }
