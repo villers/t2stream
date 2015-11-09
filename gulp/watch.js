@@ -20,5 +20,9 @@ module.exports = function () {
         gulp.start('bower');
     });
 
+    gulp.watch([__dirname + '/../src/client/**/*.html'], function(){
+        gulp.start('html');
+    });
+
     gulp.watch([__dirname + '/../dist/public/**/*']).on('change', bsync.reload);
 };
