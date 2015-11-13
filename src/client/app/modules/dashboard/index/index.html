@@ -1,2 +1,19 @@
-<h2>dashboard</h2>
-<button ng-click="vm.doClick()">ClickMe</button>
+<md-content flex>
+    <div layout="row" layout-align="center start">
+        <md-card flex>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Dashboard</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content layout="row">
+                <md-button flex class="md-primary" ng-click="vm.doClick()">
+                    clickMe
+                </md-button>
+                <md-button flex class="md-primary" ui-sref="modules.authentication">
+                    Login
+                </md-button>
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>

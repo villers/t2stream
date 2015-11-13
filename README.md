@@ -14,6 +14,7 @@
 * `gulp typescript`: compile typescript client and server
 * `gulp stylus`: compile css files
 * `gulp tslint`: check code policy
+* `gulp html`: compile html template
 * `gulp serve`: start development server
 * `gulp watch`: start watcher for compile on save
 * `gulp clean`: clean project
