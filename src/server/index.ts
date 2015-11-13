@@ -23,6 +23,9 @@ appBootable.phase(() => {
 
 appBootable.boot((err) => {
     var lama = IoC.create('database');
+    lama.models.user.all().then(function(user) {
+        console.log(user);
+    });
     if (err) {
         console.log('Something went wrong ' + JSON.stringify(err));
     } else {
