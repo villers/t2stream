@@ -8,24 +8,24 @@ import IoC = require('electrolyte');
 
 var port: number = process.env.PORT || 4444;
 
-var appBootable : express.Express & Bootable.bootable<express.Express> = bootable(express());
+var appBootable: express.Express & Bootable.bootable<express.Express> = bootable(express());
 
 appBootable.phase(bootable.initializers('init/'));
 
 appBootable.phase(bootable.routes('route.js'));
 
 appBootable.phase(() => {
-    var server: http.Server  = appBootable.listen(port, () => {
-        var listenPort : number = server.address().port;
-        console.log('The server is listening on port: ' + listenPort);
+    var DB = IoC.create('database');
+    DB.sync().then(() => {
+        console.log('DB is synced');
+        var server: http.Server = appBootable.listen(port, () => {
+            var listenPort: number = server.address().port;
+            console.log('The server is listening on port: ' + listenPort);
+        });
     });
-});
+})
 
 appBootable.boot((err) => {
-    var lama = IoC.create('database');
-    lama.models.user.all().then(function(user) {
-        console.log(user);
-    });
     if (err) {
         console.log('Something went wrong ' + JSON.stringify(err));
     } else {

@@ -2,7 +2,7 @@
 
 module.exports = {
   up: function (queryInterface, Sequelize) {
-    return queryInterface.createTable('users',
+    return queryInterface.createTable('Users',
       {
         id: {
           type: Sequelize.INTEGER,
@@ -19,10 +19,6 @@ module.exports = {
         updatedAt: {
           type: Sequelize.DATE
         },
-      },
-      {
-        engine: 'MYISAM', // default: 'InnoDB'
-        charset: 'latin1' // default: null
       });
   },
 
