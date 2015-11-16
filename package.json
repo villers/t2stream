@@ -7,7 +7,7 @@
     "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "tsd install && bower install",
-    "init-db": "sequelize db:migrate --config .\\src\\server\\config\\database.json && sequelize db:seed --config .\\src\\server\\config\\database.json"
+    "init-db": "sequelize db:migrate --config ./src/server/config/database.json && sequelize db:seed --config ./src/server/config/database.json"
   },
   "repository": {
     "type": "git",

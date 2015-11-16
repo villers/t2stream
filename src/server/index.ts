@@ -23,7 +23,7 @@ appBootable.phase(() => {
             console.log('The server is listening on port: ' + listenPort);
         });
     });
-})
+});
 
 appBootable.boot((err) => {
     if (err) {

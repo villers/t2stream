@@ -3,6 +3,9 @@
 var gulp = require('gulp');
 
 module.exports = function () {
+    gulp.src(__dirname + '/../data.sqlite3')
+        .pipe(gulp.dest(__dirname + '/../dist/'));
+
     gulp.src([__dirname + '/../src/server/**/', '!'+__dirname + '/../src/server/**/*.ts'])
         .pipe(gulp.dest(__dirname + '/../dist/'));
 
