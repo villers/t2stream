@@ -4,5 +4,9 @@ module t2stream {
     'use strict';
 
     angular.module('templates', []);
-    angular.module('t2stream', ['angular-loading-bar', 'ui.router', 'templates', 'ngMessages', 'ngMaterial', 't2stream.components', 't2stream.modules']);
+    angular.module('t2stream', [
+        'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
+        'ui.router', 'angular-loading-bar', 'pascalprecht.translate', 'LocalStorageModule', 'angularMoment',
+        'templates', 't2stream.components', 't2stream.modules'
+    ]);
 }
