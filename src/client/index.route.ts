@@ -14,7 +14,7 @@ module t2stream {
                         proxy: 'modules.dashboard'
                     }
                 });
-            $urlRouterProvider.otherwise('/dashboard');
+            $urlRouterProvider.otherwise('/login');
         }
     }
 
