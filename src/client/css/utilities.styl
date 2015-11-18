@@ -9,10 +9,11 @@
   max-width: 100%
   box-sizing: border-box
 
-// - Margin Classes
+// Margin
 .margin-normal
   margin: 16px
 
+// Margin 0 à 200 de 10 en 10
 $i = 0
 for n in 0..((200 - $i) / 10)
   .margin-{$i}
@@ -27,13 +28,13 @@ for n in 0..((200 - $i) / 10)
     margin-right: ($i)px !important
   $i = $i + 10
 
-// - Padding Classes
+// Padding
 .padding-normal
   padding: 16px
 .padded-content-page
   padding: 16px 24px
 
-//Stylus does not support while loops
+// Padding 0 à 200 de 10 en 10
 $i = 0
 for n in 0..((200 - $i) / 10)
   .padding-{$i}
@@ -48,14 +49,14 @@ for n in 0..((200 - $i) / 10)
     padding-right: ($i)px !important
   $i = $i + 10
 
-// - Opacity Classes
+// Opacity 0 à 1 de 0.1 en 0.1
 $i = 0
 for n in 0..((1 - $i) / 0.1)
   .opacity-{round($i * 100)}
     opacity: $i !important
   $i = $i + 0.1
 
-// - Positioning Classes
+// Positioning
 .position-absolute
   position: absolute
 .position-relative
@@ -89,11 +90,11 @@ for n in 0..((1 - $i) / 0.1)
     width: 100%
     height: 100%
 
-// Round classes
+// Round
 .make-round
   border-radius: 50%
 
-// Overfflow-classes
+// Overfflow
 .overflow-visible
   overflow: visible
 .overflow-auto
@@ -101,7 +102,7 @@ for n in 0..((1 - $i) / 0.1)
 .overflow-hidden
   overflow: hidden
 
-// Not selectable classes
+// Not selectable
 .no-select
   user-select: none
 
@@ -109,21 +110,7 @@ for n in 0..((1 - $i) / 0.1)
 .no-shadow
   box-shadow: none !important
 
-// Example Tabs
-.example-tabs
-  md-tab-content md-content
-    background: rgba(100, 100, 100, 0.1)
-.example-tabs-nopadding
-  md-card-content
-    padding: 0px
-.example-tabs-500-height
-  height: 500px
-
 // full background image
 .full-image-background
   background-size: cover
   background-position: center
-
-/* added to fix bug in chrome & safari when scrolling an md-content with a background image (was removing gradient) */
-.background-overlay-static
-  position: static
