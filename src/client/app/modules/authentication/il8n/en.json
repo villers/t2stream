@@ -1,0 +1,21 @@
+{
+    "LOGIN": {
+        "TITLE": "Login",
+        "EMAIL": {
+            "LABEL": "email",
+            "PLEASE_ENTER": "Please enter your email address.",
+            "PLEASE_VALID": "Please enter a valid email address."
+        },
+        "PASSWORD": {
+            "LABEL": "password",
+            "PLEASE_ENTER": "Please enter your password."
+        },
+        "REMEMBER": "Remember Me",
+        "FORGOT": "Forgot password?",
+        "BUTTON": "Log in",
+        "SIGNUP_LINK": "Don't have an account? Create one now",
+        "MESSAGES": {
+            "ACCESS_DENIED": "Username / Password Incorrect"
+        }
+    }
+}

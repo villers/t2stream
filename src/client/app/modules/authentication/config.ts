@@ -5,17 +5,20 @@ module t2stream.modules.authentication {
 
     export class ModuleConfig {
         /** @ngInject */
-        constructor($stateProvider: ng.ui.IStateProvider) {
+        constructor($stateProvider: ng.ui.IStateProvider, $translatePartialLoaderProvider: angular.translate.ITranslatePartialLoaderService) {
+
+            $translatePartialLoaderProvider.addPart('app/modules/authentication');
+
             $stateProvider
-                .state('modules.authentication', {
+                .state('authentication', {
+                    abstract: true,
+                    templateUrl: 'app/modules/authentication/layouts/authentication.html'
+                })
+                .state('authentication.login', {
                     url: '/login',
-                    views: {
-                        'viewA': {
-                            templateUrl: 'app/modules/authentication/index/index.html',
-                            controller: IndexCtrl,
-                            controllerAs: 'vm'
-                        }
-                    }
+                    templateUrl: 'app/modules/authentication/login/login.html',
+                    controller: LoginController,
+                    controllerAs: 'vm'
                 });
         }
     }

@@ -1,7 +1,7 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
 // Modules Authentification
-///<reference path="app/modules/authentication/index/index.ctrl.ts"/>
+///<reference path="app/modules/authentication/login/login.ctrl.ts"/>
 ///<reference path="app/modules/authentication/modules.ts"/>
 ///<reference path="app/modules/authentication/config.ts"/>
 

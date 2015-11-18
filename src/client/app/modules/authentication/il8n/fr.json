@@ -1,0 +1,21 @@
+{
+    "LOGIN": {
+        "TITLE": "Connexion",
+        "EMAIL": {
+            "LABEL": "e-mail",
+            "PLEASE_ENTER": "Veuillez entrer votre adresse e-mail.",
+            "PLEASE_VALID": "Veuillez entrer une adresse email valide."
+        },
+        "PASSWORD": {
+            "LABEL": "mot de passe",
+            "PLEASE_ENTER": "Veuillez entrer votre mot de passe."
+        },
+        "REMEMBER": "Se Souvenir De Moi",
+        "FORGOT": "Mot de passe oublié?",
+        "BUTTON": "Se connecter",
+        "SIGNUP_LINK": "N'avez pas de compte? Créer un maintenant",
+        "MESSAGES": {
+            "ACCESS_DENIED": "Nom D'Utilisateur / Mot De Passe Incorrect"
+        }
+    }
+}
