@@ -1,0 +1,39 @@
+{
+    "404": {
+        "TITLE": "404",
+        "HOME": "Go back home",
+        "MESSAGE": "Page not found",
+        "DESCRIPTION": "Sorry, the page you are looking for cannot be found here. Head back to the home page and start from there."
+    },
+    "500": {
+        "TITLE": "500",
+        "MESSAGE": "Something went wrong.",
+        "DESCRIPTION": "Sorry, something has gone wrong.",
+        "HOME": "Go back home"
+    },
+    "GENERAL": {
+        "CANCEL": "Cancel",
+        "OK": "Ok"
+    },
+    "ADMIN": {
+        "TOOLBAR": {
+            "SETTINGS": "Settings",
+            "PROFILE": "Profile",
+            "LOGOUT": "Logout",
+            "SIDEBAR_TOGGLE": "Toggle Menu"
+        }
+    },
+    "LANGUAGES": {
+        "ENGLISH": "English",
+        "FRENCH": "French"
+    },
+    "TABLES": {
+        "NEXT": "Next Page",
+        "PREV": "Previous Page",
+        "OF": "of",
+        "ROWS": "Rows per page:"
+    },
+    "MESSAGES": {
+        "LANGUAGE_CHANGED": "Language Changed"
+    }
+}

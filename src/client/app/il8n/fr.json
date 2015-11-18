@@ -1,0 +1,39 @@
+{
+    "404": {
+        "TITLE": "404",
+        "HOME": "Rentrer à la maison",
+        "MESSAGE": "Page non trouvée",
+        "DESCRIPTION": "Désolé, la page que vous recherchez ne se trouve pas ici. Retournez à la page d'accueil et à partir de là."
+    },
+    "500": {
+        "TITLE": "500",
+        "MESSAGE": "Quelque chose s'est mal passé.",
+        "DESCRIPTION": "Désolé, quelque chose a mal tourné.",
+        "HOME": "Rentrer à la maison"
+    },
+    "GENERAL": {
+        "CANCEL": "Annuler",
+        "OK": "Ok"
+    },
+    "ADMIN": {
+        "TOOLBAR": {
+            "SETTINGS": "Paramètres",
+            "PROFILE": "Profil",
+            "LOGOUT": "Déconnexion",
+            "SIDEBAR_TOGGLE": "Bascule Menu"
+        }
+    },
+    "LANGUAGES": {
+        "ENGLISH": "Anglais",
+        "FRENCH": "Français"
+    },
+    "TABLES": {
+        "NEXT": "Page Suivante",
+        "PREV": "Page Précédente",
+        "OF": "de",
+        "ROWS": "Lignes par page:"
+    },
+    "MESSAGES": {
+        "LANGUAGE_CHANGED": "Langue Changé"
+    }
+}
