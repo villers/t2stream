@@ -19,4 +19,5 @@
 ///<reference path="index.config.ts"/>
 ///<reference path="index.route.ts"/>
 ///<reference path="index.translate.ts"/>
+///<reference path="index.theme.ts"/>
 ///<reference path="index.run.ts"/>
