@@ -19,7 +19,13 @@ module t2stream.modules.authentication {
                     templateUrl: 'app/modules/authentication/login/login.html',
                     controller: LoginController,
                     controllerAs: 'vm'
-                });
+                })
+                .state('authentication.register', {
+                    url: '/register',
+                    templateUrl: 'app/modules/authentication/register/register.html',
+                    controller: RegisterController,
+                    controllerAs: 'vm'
+            });
         }
     }
 

@@ -17,5 +17,27 @@
         "MESSAGES": {
             "ACCESS_DENIED": "Username / Password Incorrect"
         }
+    },
+    "REGISTER": {
+        "TITLE": "Sign up",
+        "EMAIL": {
+            "LABEL": "Email",
+            "PLEASE_ENTER": "Please type your email.",
+            "PLEASE_VALID": "Please type a valid email address"
+        },
+        "PASSWORD": {
+            "LABEL": "Password",
+            "PLEASE_ENTER": "Please type your password.",
+            "SAME_PASSWORD": "Same password required."
+        },
+        "PASSWORD_CONFIRM": {
+            "LABEL": "Confirm",
+            "PLEASE_ENTER": "Confirm your password."
+        },
+        "BUTTON": "Sign up",
+        "SIGNIN_LINK": "Already signed up ? Sign in.",
+        "MESSAGES": {
+            "ACCESS_DENIED": "Some fields are incorrect."
+        }
     }
 }

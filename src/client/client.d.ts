@@ -1,7 +1,16 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
+// Components modules
+///<reference path="app/components/validation/modules.ts"/>
+
+// Components
+///<reference path="app/components/validation/src/passwordMatch.ts"/>
+
+
+
 // Modules Authentification
 ///<reference path="app/modules/authentication/login/login.ctrl.ts"/>
+///<reference path="app/modules/authentication/register/register.ctrl.ts"/>
 ///<reference path="app/modules/authentication/modules.ts"/>
 ///<reference path="app/modules/authentication/config.ts"/>
 

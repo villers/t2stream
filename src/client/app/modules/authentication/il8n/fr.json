@@ -17,5 +17,28 @@
         "MESSAGES": {
             "ACCESS_DENIED": "Nom D'Utilisateur / Mot De Passe Incorrect"
         }
+    },
+    "REGISTER": {
+        "TITLE": "Inscription",
+        "EMAIL": {
+            "LABEL": "Email",
+            "PLEASE_ENTER": "Veuillez entrer votre adresse e-mail.",
+            "PLEASE_VALID": "Veuillez entrer une adresse email valide."
+        },
+        "PASSWORD": {
+            "LABEL": "Mot de passe",
+            "PLEASE_ENTER": "Veuillez entrer votre mot de passe.",
+            "MIN_LENGTH": "Votre mot de passe doit être supérieur à 8 caractères de long.",
+            "SAME_PASSWORD": "Vous devez entrer le même mot de passe."
+        },
+        "PASSWORD_CONFIRM": {
+            "LABEL": "Confirmation",
+            "PLEASE_ENTER": "Confirmation du mot de passe."
+        },
+        "BUTTON": "S'inscrire",
+        "SIGNIN_LINK": "Vous avez un compte ? Connectez-vous.",
+        "MESSAGES": {
+            "ACCESS_DENIED": "Certaines informations sont incorrectes."
+        }
     }
 }

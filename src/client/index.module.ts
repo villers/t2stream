@@ -7,6 +7,6 @@ module t2stream {
     angular.module('t2stream', [
         'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
         'ui.router', 'angular-loading-bar', 'pascalprecht.translate', 'LocalStorageModule', 'angularMoment',
-        'templates', 't2stream.components', 't2stream.modules'
+        'templates', 't2stream.components', 't2stream.modules',
     ]);
 }
