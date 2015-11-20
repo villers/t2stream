@@ -1,0 +1,23 @@
+<md-content flex>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 translate>MOVIES.TITLE_HEADER</h2>
+        </div>
+    </md-toolbar>
+    <div layout="row" layout-align="center start">
+        <md-card flex>
+            <md-card-content layout="row" layout-wrap layout-align="space-around start">
+                    <section flex="10" class="movie" ng-repeat="film in vm.films">
+                        <figure>
+                            <img src="{{film.figure.img}}" alt=""/>
+                            <figcaption><h1>{{film.title}}</h1></figcaption>
+                        </figure>
+                        <div class="notes">
+                            <img class="star" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTeKzTVLFSFy4ql67ighz8QAShxrAnkfBc_O9rsMshKSVQYvXTGQ"
+                             alt=""/>
+                        </div>
+                    </section>
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>

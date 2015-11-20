@@ -20,6 +20,11 @@
 ///<reference path="app/modules/dashboard/config.ts"/>
 
 
+// Modules Movies
+///<reference path="app/modules/movies/index/index.ctrl.ts"/>
+///<reference path="app/modules/movies/modules.ts"/>
+///<reference path="app/modules/movies/config.ts"/>
+
 ///<reference path="app/components/components.ts"/>
 ///<reference path="app/modules/modules.ts"/>
 
