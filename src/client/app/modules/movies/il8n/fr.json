@@ -1,7 +1,8 @@
 {
   "MOVIES": {
     "TITLE": "t2stream - Films",
-    "TITLE_HEADER": "Films"
-
+    "TITLE_HEADER": "Films",
+    "SEEN": "Vu",
+    "NOT_SEEN": "Pas vu"
   }
 }

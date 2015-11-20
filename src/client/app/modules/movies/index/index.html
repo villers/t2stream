@@ -7,16 +7,24 @@
     <div layout="row" layout-align="center start">
         <md-card flex>
             <md-card-content layout="row" layout-wrap layout-align="space-around start">
-                    <section flex="10" class="movie" ng-repeat="film in vm.films">
+                <section flex="10" class="movie" ng-repeat="film in vm.films">
+                    <div class="picture">
                         <figure>
                             <img src="{{film.figure.img}}" alt=""/>
-                            <figcaption><h1>{{film.title}}</h1></figcaption>
+                            <figcaption><h1>{{film.title}} Image</h1></figcaption>
                         </figure>
-                        <div class="notes">
-                            <img class="star" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTeKzTVLFSFy4ql67ighz8QAShxrAnkfBc_O9rsMshKSVQYvXTGQ"
-                             alt=""/>
+                        <div class="title">
+                            <div class="notes">
+                                <img class="star" src="../assets/images/films/star.png"
+                                     alt="" ng-repeat="star in vm.repeatInt(film.rating)"/>
+                            </div>
+                            <h1>{{film.title}}</h1>
                         </div>
-                    </section>
+                        <div class="hover">
+                            <div ng-class="{ 'eye': !film.seen, 'eye-full': film.seen }" title="{{ film.seen ? FILM.SEEN : FILM.NOT_SEEN }}" translate></div>
+                        </div>
+                    </div>
+                </section>
             </md-card-content>
         </md-card>
     </div>
