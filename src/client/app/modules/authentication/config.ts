@@ -22,10 +22,10 @@ module t2stream.modules.authentication {
                 })
                 .state('authentication.register', {
                     url: '/register',
-                    templateUrl: 'app/modules/authentication/register/register.html',
+                    templateUrl: 'app/modules/authentication/signup/register.html',
                     controller: RegisterController,
                     controllerAs: 'vm'
-            });
+                });
         }
     }
 

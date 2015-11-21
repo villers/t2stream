@@ -1,97 +1,74 @@
-.blurred-bg {
-  background: url('../assets/images/backgrounds/blurred.jpg') no-repeat 50% 50%;
-  background-size: cover;
-}
+.blurred-bg
+  background url('../assets/images/backgrounds/blurred.jpg') no-repeat 50% 50%
+  background-size cover
 
-#movies md-toolbar,
-#movies md-card {
-  background: none;
-  box-shadow none;
-}
+#movies
+  margin 0 auto
 
+  md-toolbar, md-card
+    background none
+    box-shadow none
 
-#movies md-content {
-  background:none;
-}
+  md-content
+    background none
 
-#movies {
-  margin:0 auto;
-}
+  .movie
+    margin 10px 25px
+    background rgba(255, 255, 255, 0.1)
+    box-shadow 0 7px 21px #141414
 
-#movies .movie {
-  margin:10px 25px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 7px 21px #141414;
-}
+    h1
+      cursor pointer
+      color #fff
+      font-weight normal
+      font-size 16px
 
+    .picture
+      width auto
+      position relative
+      &:hover .hover
+        display block
 
-#movies .movie h1 {
-  cursor:pointer;
-  color:#fff;
-  font-weight:normal;
-  font-size:16px;
-}
+      .hover
+        display none
+        position absolute
+        top 0
+        padding 5px 10px
 
-#movies .movie .picture {
-  width:auto;
-  position:relative;
-}
+        .eye, .eye-full
+          cursor pointer
+          display block
+          height 32px
+          width 32px
 
-#movies .movie .picture .title  {
-  padding:10px 3%;
-  position:absolute;
-  bottom:0;
-  background: rgba(255, 255, 255, 0.1);
-  width:94%;
-}
+        .eye
+          background url('../assets/images/films/eye.png') no-repeat 50% 50%
+          background-size 32px
 
-#movies .movie .picture figure {
-  margin:0 auto;
-}
+        .eye-full
+          background url('../assets/images/films/eye-full.png') no-repeat 50% 50%
+          background-size 32px
 
-#movies .movie .picture figure img {
-  cursor:pointer;
-  width:auto;
-}
+      .title
+        padding 10px 3%
+        position absolute
+        bottom 0
+        background rgba(255, 255, 255, 0.1)
+        width 94%
 
-#movies .movie .picture figure figcaption {
-  display:none;
-}
+      figure
+        margin 0 auto
 
-#movies .movie .picture .notes {
-  width:75px;
-}
+        img
+          cursor pointer
+          width auto
 
-#movies .movie .picture .notes img.star {
-  cursor:pointer;
-  width:15px;
-}
+      figcaption
+        display none
 
-#movies .movie .picture .hover {
-  display:none;
-  position:absolute;
-  top:0;
-  padding:5px 10px;
-}
+    .notes
+      width 75px
 
-#movies .movie .picture:hover .hover {
-  display:block;
-}
-
-#movies .movie .picture .hover .eye,
-#movies .movie .picture .hover .eye-full {
-  cursor:pointer;
-  display:block;
-  height:32px;
-  width:32px;
-}
-#movies .movie .picture .hover .eye {
-  background: url('../assets/images/films/eye.png') no-repeat 50% 50%;
-  background-size:32px;
-}
-
-#movies .movie .picture .hover .eye-full {
-  background: url('../assets/images/films/eye-full.png') no-repeat 50% 50%;
-  background-size:32px;
-
-}
+      img.star
+        cursor pointer
+        width 15px

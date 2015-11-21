@@ -8,7 +8,6 @@ module t2stream.modules.movies {
         full: string;
     }
 
-
     interface FigureFoundation {
         img: string;
     }
@@ -20,21 +19,18 @@ module t2stream.modules.movies {
     }
 
     class Film {
-        public title: string;
-        public figure: FigureFoundation;
-        public description: FilmDescriptionFoundation;
-        public rating: number;
-        public seen: boolean;
+        title: string;
+        figure: FigureFoundation;
+        description: FilmDescriptionFoundation;
+        rating: number;
+        seen: boolean;
     }
 
     export class IndexController {
-
         public films: Array<FilmFoundation> = [];
-        public repeatInt:any;
+
         /** @ngInject */
         constructor() {
-
-            this.repeatInt = this.makeArray;
             var tpl = {
                 title: 'Exemple de film #',
                 figure: {
@@ -61,17 +57,12 @@ module t2stream.modules.movies {
             return r > max || r < min ? this.randomNote(min, max) : r;
         }
 
-        private makeArray(u) {
+        repeatInt(u): Array<number> {
             var arr = [];
             for (var i = 0; i < u; i++) {
                 arr.push(i);
             }
             return arr;
-        }
-
-
-        doClick() {
-            alert('You are crazy!!!');
         }
     }
 }

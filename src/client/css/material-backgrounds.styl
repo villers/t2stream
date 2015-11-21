@@ -1,15 +1,11 @@
 // Material Backgrounds Pack
 
 // Pack 1
-$i = 01
-for n in 0..((40 - $i) / 1)
-  .mb-bg-{$i}
-    background-image: url('../assets/images/backgrounds/material-backgrounds/mb-bg-'+$i+'.jpg')
-  $i = $i + 1
+for n in 1..40
+  .mb-bg-{n}
+    background-image: url('../assets/images/backgrounds/material-backgrounds/mb-bg-'+n+'.jpg')
 
 // Pack 2
-$i = 01
-for n in 0..((30 - $i) / 1)
-  .mb-bg-fb-{$i}
-    background-image: url('../assets/images/backgrounds/material-backgrounds-2/mb-bg-fb-'+$i+'.png');
-  $i = $i + 1
+for n in 1..30
+  .mb-bg-fb-{n}
+    background-image: url('../assets/images/backgrounds/material-backgrounds-2/mb-bg-fb-'+n+'.png');

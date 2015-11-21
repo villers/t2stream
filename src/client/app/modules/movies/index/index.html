@@ -7,16 +7,15 @@
     <div layout="row" layout-align="center start">
         <md-card flex>
             <md-card-content layout="row" layout-wrap layout-align="space-around start">
-                <section flex="10" class="movie" ng-repeat="film in vm.films">
+                <section flex="20" class="movie" ng-repeat="film in vm.films">
                     <div class="picture">
                         <figure>
-                            <img src="{{film.figure.img}}" alt=""/>
+                            <img ng-src="{{film.figure.img}}" alt=""/>
                             <figcaption><h1>{{film.title}} Image</h1></figcaption>
                         </figure>
                         <div class="title">
                             <div class="notes">
-                                <img class="star" src="../assets/images/films/star.png"
-                                     alt="" ng-repeat="star in vm.repeatInt(film.rating)"/>
+                                <img class="star" src="../assets/images/films/star.png" alt="" ng-repeat="star in vm.repeatInt(film.rating)"/>
                             </div>
                             <h1>{{film.title}}</h1>
                         </div>

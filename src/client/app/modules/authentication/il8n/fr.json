@@ -18,27 +18,32 @@
             "ACCESS_DENIED": "Nom D'Utilisateur / Mot De Passe Incorrect"
         }
     },
-    "REGISTER": {
-        "TITLE": "Inscription",
+    "SIGNUP": {
+        "TITLE": "S'inscrire",
+        "NAME": {
+            "LABEL": "nom",
+            "PLEASE_ENTER": "Veuillez entrer votre nom"
+        },
         "EMAIL": {
-            "LABEL": "Email",
-            "PLEASE_ENTER": "Veuillez entrer votre adresse e-mail.",
-            "PLEASE_VALID": "Veuillez entrer une adresse email valide."
+            "LABEL": "e-mail",
+            "PLEASE_ENTER": "Veuillez entrer votre adresse e-mail",
+            "PLEASE_VALID": "Veuillez entrer une adresse email valide"
         },
         "PASSWORD": {
-            "LABEL": "Mot de passe",
-            "PLEASE_ENTER": "Veuillez entrer votre mot de passe.",
-            "MIN_LENGTH": "Votre mot de passe doit être supérieur à 8 caractères de long.",
-            "SAME_PASSWORD": "Vous devez entrer le même mot de passe."
+            "LABEL": "mot de passe",
+            "PLEASE_ENTER": "Veuillez entrer un mot de passe",
+            "MIN_LENGTH": "Votre mot de passe doit être supérieur à 8 caractères de long",
+            "SAME_PASSWORD": "Vous devez entrer le même mot de passe"
         },
         "PASSWORD_CONFIRM": {
-            "LABEL": "Confirmation",
-            "PLEASE_ENTER": "Confirmation du mot de passe."
+            "LABEL": "confirmer le mot de passe"
         },
         "BUTTON": "S'inscrire",
-        "SIGNIN_LINK": "Vous avez un compte ? Connectez-vous.",
+        "HAVE_LOGIN": "Avez déjà un compte? Connectez-vous ici.",
         "MESSAGES": {
-            "ACCESS_DENIED": "Certaines informations sont incorrectes."
+            "CONFIRM_SENT": "Envoi de notre Confirmation",
+            "LOGIN_NOW": "Connexion",
+            "NO_SIGNUP": "L'inscription a échoué"
         }
     }
 }

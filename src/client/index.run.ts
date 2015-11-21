@@ -12,5 +12,5 @@ module t2stream {
 
     angular
         .module('t2stream')
-        .config(RunBlock);
+        .run(RunBlock);
 }

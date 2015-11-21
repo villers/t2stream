@@ -6,9 +6,7 @@ module t2stream.modules.movies {
     export class ModuleConfig {
         /** @ngInject */
         constructor($stateProvider: ng.ui.IStateProvider, $translatePartialLoaderProvider: angular.translate.ITranslatePartialLoaderService) {
-
             $translatePartialLoaderProvider.addPart('app/modules/movies');
-
             $stateProvider
                 .state('movies', {
                     abstract: true,

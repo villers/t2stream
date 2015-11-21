@@ -5,28 +5,28 @@
 module t2stream.components.validation {
 
     interface IScopeInterface extends angular.IScope {
-        match: angular.INgModelController;
+        same: angular.INgModelController;
     }
 
-    export class PasswordMatch {
-
+    export class SameInput {
         static resolve(): angular.IDirective {
             return {
                 restrict: 'A',
                 require: 'ngModel',
                 link: (scope: IScopeInterface, element: angular.IRootElementService, attrs: angular.IAttributes, ngModel: angular.INgModelController) => {
-                    ngModel.$viewChangeListeners.push(function() {
-                        ngModel.$setValidity('samePassword', scope.match.$modelValue === ngModel.$modelValue);
-                        scope.match.$setValidity('samePassword', scope.match.$modelValue === ngModel.$modelValue);
+                    ngModel.$viewChangeListeners.push(() => {
+                        ngModel.$setValidity('same', scope.same.$modelValue === ngModel.$modelValue);
+                        scope.same.$setValidity('same', scope.same.$modelValue === ngModel.$modelValue);
                     });
                 },
                 scope: {
-                    'match': '='
+                    'same': '='
                 }
             };
         }
-
     }
 
-    angular.module('t2stream.components.validation').directive('match', PasswordMatch.resolve);
+    angular
+        .module('t2stream.components.validation')
+        .directive('same', SameInput.resolve);
 }

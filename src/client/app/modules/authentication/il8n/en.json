@@ -18,26 +18,33 @@
             "ACCESS_DENIED": "Username / Password Incorrect"
         }
     },
-    "REGISTER": {
+    "SIGNUP": {
         "TITLE": "Sign up",
+        "NAME": {
+            "LABEL": "name",
+            "PLEASE_ENTER": "Please enter your name"
+        },
         "EMAIL": {
-            "LABEL": "Email",
-            "PLEASE_ENTER": "Please type your email.",
-            "PLEASE_VALID": "Please type a valid email address"
+            "LABEL": "email",
+            "PLEASE_ENTER": "Please enter your email address",
+            "PLEASE_VALID": "Please enter a valid email address"
         },
         "PASSWORD": {
-            "LABEL": "Password",
-            "PLEASE_ENTER": "Please type your password.",
-            "SAME_PASSWORD": "Same password required."
+            "LABEL": "password",
+            "PLEASE_ENTER": "Please enter a password",
+            "MIN_LENGTH": "Your password must be greater than 8 characters long",
+            "SAME_PASSWORD": "You need to enter the same password"
         },
         "PASSWORD_CONFIRM": {
-            "LABEL": "Confirm",
-            "PLEASE_ENTER": "Confirm your password."
+            "LABEL": "confirm password"
         },
-        "BUTTON": "Sign up",
-        "SIGNIN_LINK": "Already signed up ? Sign in.",
+        "BUTTON": "Sign Up",
+        "HAVE_LOGIN": "Already have an account? Login here.",
         "MESSAGES": {
-            "ACCESS_DENIED": "Some fields are incorrect."
+            "CONFIRM_SENT": "Confirmation sent to",
+            "LOGIN_NOW": "Login",
+            "CONFIRM_SENT": "Confirmation sent to",
+            "NO_SIGNUP": "Could not sign user up"
         }
     }
 }

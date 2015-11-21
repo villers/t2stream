@@ -13,5 +13,8 @@ module t2stream {
             cfpLoadingBarProvider.includeSpinner = false;
         }
     }
-    angular.module('t2stream').config(Config);
+
+    angular
+        .module('t2stream')
+        .config(Config);
 }
