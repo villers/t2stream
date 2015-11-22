@@ -2,7 +2,10 @@
 
 // Components modules
 ///<reference path="app/components/validation/modules.ts"/>
-///<reference path="app/components/validation/src/passwordMatch.ts"/>
+///<reference path="app/components/validation/passwordMatch.ts"/>
+///<reference path="app/components/widget/modules.ts"/>
+///<reference path="app/components/widget/widget.ts"/>
+
 ///<reference path="app/components/menu/menu.ctrl.ts"/>
 ///<reference path="app/components/toolbars/toolbars.ctrl.ts"/>
 

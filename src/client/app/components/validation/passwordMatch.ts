@@ -1,6 +1,4 @@
-/**
- * Created by Thomas on 19/11/15.
- */
+/// <reference path="../../../client.d.ts" />
 
 module t2stream.components.validation {
 
