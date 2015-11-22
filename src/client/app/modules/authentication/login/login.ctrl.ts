@@ -18,7 +18,7 @@ module t2stream.modules.authentication {
         }
 
         loginClick() {
-            this.$state.go('modules.dashboard');
+            this.$state.go('layout.default.dashboard');
         }
     }
 }

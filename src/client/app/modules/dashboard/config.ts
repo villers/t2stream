@@ -7,15 +7,11 @@ module t2stream.modules.dashboard {
         /** @ngInject */
         constructor($stateProvider: ng.ui.IStateProvider) {
             $stateProvider
-                .state('modules.dashboard', {
+                .state('layout.default.dashboard', {
                     url: '/dashboard',
-                    views: {
-                        'viewA': {
-                            templateUrl: 'app/modules/dashboard/index/index.html',
-                            controller: IndexCtrl,
-                            controllerAs: 'vm'
-                        }
-                    }
+                    templateUrl: 'app/modules/dashboard/index/index.html',
+                    controller: IndexCtrl,
+                    controllerAs: 'vm'
                 });
         }
     }

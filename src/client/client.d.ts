@@ -3,6 +3,8 @@
 // Components modules
 ///<reference path="app/components/validation/modules.ts"/>
 ///<reference path="app/components/validation/src/passwordMatch.ts"/>
+///<reference path="app/components/menu/menu.ctrl.ts"/>
+///<reference path="app/components/toolbars/toolbars.ctrl.ts"/>
 
 // Modules Authentification
 ///<reference path="app/modules/authentication/login/login.ctrl.ts"/>

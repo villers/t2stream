@@ -1,0 +1,19 @@
+<md-toolbar class="sidebar-left-toolbar">
+    <div class="md-toolbar-tools" layout="row" layout-align="start center">
+        <h2 flex class="sidebar-left-title">T2Stream</h2>
+    </div>
+</md-toolbar>
+
+<md-content>
+    <md-button ui-sref="." class="md-primary md-raised side-menu-link " ng-class="{ 'md-hue-1': vm.routeName == 'layout.default.dashboard' }">
+        <md-icon class="side-menu-icon" md-font-icon="zmdi zmdi-home"></md-icon>
+        <span>Dashboard</span>
+    </md-button>
+
+    <md-divider></md-divider>
+
+    <md-button ui-sref="authentication.login" class="md-primary md-raised side-menu-link ">
+        <md-icon class="side-menu-icon" md-font-icon="zmdi zmdi-home"></md-icon>
+        <span translate="">ADMIN.TOOLBAR.LOGOUT</span>
+    </md-button>
+</md-content>

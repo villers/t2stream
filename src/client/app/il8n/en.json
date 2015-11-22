@@ -17,10 +17,8 @@
     },
     "ADMIN": {
         "TOOLBAR": {
-            "SETTINGS": "Settings",
             "PROFILE": "Profile",
-            "LOGOUT": "Logout",
-            "SIDEBAR_TOGGLE": "Toggle Menu"
+            "LOGOUT": "Logout"
         }
     },
     "LANGUAGES": {

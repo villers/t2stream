@@ -17,10 +17,8 @@
     },
     "ADMIN": {
         "TOOLBAR": {
-            "SETTINGS": "Paramètres",
             "PROFILE": "Profil",
-            "LOGOUT": "Déconnexion",
-            "SIDEBAR_TOGGLE": "Bascule Menu"
+            "LOGOUT": "Déconnexion"
         }
     },
     "LANGUAGES": {

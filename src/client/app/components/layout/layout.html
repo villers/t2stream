@@ -1,0 +1,18 @@
+<div layout="row" class="full-height">
+    <!-- left sidebar -->
+
+    <md-sidenav class="admin-sidebar-left md-sidenav-left md-whiteframe-z2" md-is-locked-open="true" md-component-id="left" ui-view="sidebarLeft"></md-sidenav>
+
+    <!-- main content -->
+    <div id="admin-panel" layout="column" flex>
+        <!-- top toolbar -->
+        <md-toolbar class="admin-toolbar" ui-view="toolbar"></md-toolbar>
+
+        <!-- scrollable content -->
+        <md-content flex ui-view="content"></md-content>
+
+        <!-- footer content -->
+        <div ui-view="belowContent"></div>
+    </div>
+
+</div>
