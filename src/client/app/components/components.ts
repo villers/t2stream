@@ -3,5 +3,5 @@
 module t2stream.components {
     'use strict';
 
-    angular.module('t2stream.components', ['t2stream.components.validation']);
+    angular.module('t2stream.components', ['t2stream.components.validation', 't2stream.components.widget']);
 }

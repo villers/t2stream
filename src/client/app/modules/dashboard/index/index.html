@@ -1,14 +1,15 @@
-<md-content flex>
-    <div layout="row" layout-align="center start">
-        <md-card flex>
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <h2>Dashboard</h2>
-                </div>
-            </md-toolbar>
-            <md-card-content layout="row">
-                <md-button flex class="md-primary" ng-click="vm.doClick()" translate="ADMIN.TOOLBAR.LOGOUT" aria-label="{'ADMIN.TOOLBAR.LOGOUT' | translate}"></md-button>
-            </md-card-content>
-        </md-card>
+<div class="dashboard-container overlay-5 padded-content-page" layout="column">
+    <div layout="row" layout-sm="column" layout-wrap layout-padding>
+        <widget loading="false" ng-repeat="i in [0,1,2,3,4]" class="widget-blog" flex="25" flex-sm="100">
+            <img src="../assets/images/films/film.jpg" alt="some bg">
+            <div class="widget-blog-text padding-10">
+                <h2>Lorem ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Adipisci alias cum cumque doloribus error fuga quo rem tempora!
+                    Assumenda at blanditiis consequuntur doloribus facere non repudiandae?
+                    Aperiam eveniet quia sed?
+                </p>
+            </div>
+        </widget>
     </div>
-</md-content>
+</div>
