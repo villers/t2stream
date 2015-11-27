@@ -22,8 +22,15 @@
   },
   "homepage": "https://github.com/villers/t2stream#readme",
   "dependencies": {
+    "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
     "express": "^4.13.3",
-    "sqlite3": "^3.1.1"
+    "jison": "^0.4.15",
+    "method-override": "^2.3.5",
+    "morgan": "^1.6.1",
+    "sails-disk": "^0.10.8",
+    "sqlite3": "^3.1.1",
+    "waterline": "^0.10.28"
   },
   "devDependencies": {
     "bower": "^1.6.5",

@@ -19,7 +19,7 @@ export class Declaration {
 
     constructor(declarationPath: string) {
         var jison: any = require('jison');
-        var typescript = fs.readFileSync(__dirname + '/../jison/typescript.jison', { encoding: 'utf8' });
+        var typescript = fs.readFileSync(__dirname + '/config/typescript.jison', { encoding: 'utf8' });
         var declaration = fs.readFileSync(declarationPath, { encoding: 'utf8' });
         this.items = new jison.Parser(typescript).parse(declaration);
     }
