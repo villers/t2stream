@@ -5,16 +5,19 @@ import { Router, Route } from './Router';
 import { Declaration, ControllerInfo, ModelInfo, MemberInfo } from './Declaration';
 import { Response } from './Response';
 import { Reply } from './Reply';
-import { ModelController, IActionResult, ActionFilter } from './Controller';
+import { ModelController } from './Controller';
+import { IActionResult } from './Result';
+import { ActionFilter } from './Filter';
 import { extend } from './Global';
 
 import { Express as EXExpress, Request as EXRequest, Response as EXResponse } from 'express';
 
 import fs = require('fs');
 import path = require('path');
+import * as _ from 'lodash';
 
 
-    export class Application {
+export class Application {
         config: Configuration;
         router: Router;
         root: string;

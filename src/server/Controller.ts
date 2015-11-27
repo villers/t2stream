@@ -1,111 +1,14 @@
 /// <reference path="./TypeFramework.d.ts" />
 
-import { Application } from './Application';
 import { Response } from './Response';
 import { Request } from './Request';
 import { Reply } from './Reply';
 import { Model } from './Model';
+import { IFilterAction, ActionFilter } from './Filter';
+import { IActionResult } from './Result';
 import * as path from 'path';
 
 import {Request as EXRequest } from 'express';
-
-export interface IActionResult {
-    execute(Application, Response): void;
-}
-
-export class RedirectResult implements IActionResult {
-    constructor(public url: string, public status: number = 302) { }
-    execute(app: Application, response: Response) {
-        response.express.redirect(this.status, this.url);
-    }
-}
-
-export class ContentResult implements IActionResult {
-    constructor(public content: string, public contentType?: string) { }
-    execute(app: Application, response: Response) {
-        if (!!this.contentType) {
-            response.setContentType(this.contentType);
-        }
-        response.express.send(this.content);
-    }
-}
-
-export class JsonResult implements IActionResult {
-    constructor(public data: {}) { }
-    execute(app: Application, response: Response) {
-        response.express.json(this.data);
-    }
-}
-
-export class FileResult implements IActionResult {
-    constructor(public path: string) { }
-    execute(app: Application, response: Response) {
-        var file = path.join(app.root, this.path);
-        response.express.sendfile(file);
-    }
-}
-
-export class DownloadResult implements IActionResult {
-    constructor(public path: string, public filename?: string) { }
-    execute(app: Application, response: Response) {
-        var file = path.join(app.root, this.path);
-        response.express.attachment(file);
-        response.express.sendfile(file, this.filename);
-    }
-}
-
-export class ViewResult implements IActionResult {
-    constructor(public template: string, public options?: {}) { }
-    execute(app: Application, response: Response) {
-        response.express.render(this.template, this.options);
-    }
-}
-
-export interface IFilterAction {
-    (context: IActionFilterContext): void;
-}
-
-export interface IActionFilterContext {
-    request: Request;
-    response: Response;
-    reply: Reply;
-    next: () => void;
-    result?: IActionResult;
-}
-
-export interface IActionFilter {
-    before?(context: IActionFilterContext): void;
-    after?(context: IActionFilterContext): void;
-}
-
-export class ActionFilter implements IActionFilter {
-    private includeList: string[] = [];
-    private excludeList: string[] = [];
-
-    contains(action: string) {
-        if (this.includeList.length > 0 && this.excludeList.length > 0) {
-            throw new Error('Action filter includes and excludes cannot be both specified!');
-        }
-
-        if (this.includeList.length > 0 && !_.contains(this.includeList, action)) {
-            return false;
-        }
-        if (this.excludeList.length > 0 && _.contains(this.excludeList, action)) {
-            return false;
-        }
-        return true;
-    }
-
-    only(...includes: string[]): ActionFilter {
-        this.includeList.push.apply(this.includeList, includes);
-        return this;
-    }
-
-    except(...excludes: string[]): ActionFilter {
-        this.excludeList.push.apply(this.excludeList, excludes);
-        return this;
-    }
-}
 
 export class Controller extends Reply {
     static filters: any[];

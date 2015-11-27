@@ -11,3 +11,5 @@
 /// <reference path="Router.ts" />
 /// <reference path="Application.ts" />
 /// <reference path="Waterline.d.ts" />
+/// <reference path="Result.ts" />
+/// <reference path="Filter.ts" />

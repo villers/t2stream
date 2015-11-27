@@ -1,6 +1,6 @@
 /// <reference path="./TypeFramework.d.ts" />
 
-import { RedirectResult, ContentResult, JsonResult, FileResult, DownloadResult, ViewResult } from './Controller';
+import { RedirectResult, ContentResult, JsonResult, FileResult, DownloadResult, ViewResult } from './Result';
 
 export class Reply {
     constructor(public send: (IActionResult) => void) { }
