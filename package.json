@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "tsd install && bower install",
-    "init-db": "sequelize db:migrate --config ./src/server/config/database.json && sequelize db:seed --config ./src/server/config/database.json"
+    "postinstall": "tsd install && bower install"
   },
   "repository": {
     "type": "git",
@@ -23,11 +22,7 @@
   },
   "homepage": "https://github.com/villers/t2stream#readme",
   "dependencies": {
-    "bootable": "^0.2.4",
-    "electrolyte": "^0.2.0",
     "express": "^4.13.3",
-    "sequelize": "^3.13.0",
-    "sequelize-definer": "^0.4.6",
     "sqlite3": "^3.1.1"
   },
   "devDependencies": {
@@ -53,7 +48,6 @@
     "main-bower-files": "^2.9.0",
     "ripe": "^0.2.1",
     "run-sequence": "^1.1.4",
-    "sequelize-cli": "^2.1.0",
     "tsd": "^0.6.5",
     "yargs": "^3.29.0"
   }

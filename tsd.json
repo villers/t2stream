@@ -5,17 +5,8 @@
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
-    "express/express.d.ts": {
-      "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
-    },
-    "serve-static/serve-static.d.ts": {
-      "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
-    },
-    "node/node.d.ts": {
-      "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
-    },
     "mime/mime.d.ts": {
-      "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
+      "commit": "fb2b3b1e068c9ff7d8f9b0851c08d37d96c95c38"
     },
     "validator/validator.d.ts": {
       "commit": "35989a3ab4834b8e8b2b56788f1d4fc46a25dc8d"
@@ -49,6 +40,18 @@
     },
     "angular-local-storage/angular-local-storage.d.ts": {
       "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
+    },
+    "bcrypt/bcrypt.d.ts": {
+      "commit": "0ea013a775ce1fb90c5e41b255e1d038714ffbe5"
+    },
+    "node/node.d.ts": {
+      "commit": "fb2b3b1e068c9ff7d8f9b0851c08d37d96c95c38"
+    },
+    "express/express.d.ts": {
+      "commit": "fb2b3b1e068c9ff7d8f9b0851c08d37d96c95c38"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "fb2b3b1e068c9ff7d8f9b0851c08d37d96c95c38"
     }
   }
 }
