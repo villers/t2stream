@@ -4,9 +4,13 @@
 ///<reference path="typings/error.d.ts"/>
 
 /// <reference path="config/config.ts" />
+
 /// <reference path="models/user.ts" />
 
 ///<reference path="helpers/error.ts"/>
+///<reference path="helpers/token.ts"/>
+
+///<reference path="middlewares/error.ts"/>
 ///<reference path="middlewares/isAuthenticated.ts"/>
 
 ///<reference path="routes/anonymous.ts"/>
