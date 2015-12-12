@@ -1,0 +1,23 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "token" : {
+    "secret": "mysecret",
+    "issuer": "issuer",
+    "expiresInSeconds": 86400
+  },
+  "database" : {
+    "disk": {
+      "url": "./data/"
+    },
+    "mongo": {
+      "url": "mongodb://root@localhost:27017/jwt-api-db"
+    },
+    "mysql": {
+      "url": "mysql://root@localhost:3306/jwt-api-db"
+    }
+  },
+  "server": {
+    "port": 4444
+  }
+}
