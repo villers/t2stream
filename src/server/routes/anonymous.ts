@@ -7,7 +7,7 @@ export function anonymousRoutes() {
     let router = express.Router();
 
     router.route('/api')
-        .get((req, res) => {
+        .get((req: express.Request, res: express.Response) => {
             res.json({
                 name: config.name,
                 version: config.version
@@ -15,14 +15,14 @@ export function anonymousRoutes() {
         });
 
     router.route('/api/login')
-        .get((req, res) => {
+        .get((req: express.Request, res: express.Response) => {
             res.json({
                 error: 'need implement api login'
             });
         });
 
     router.route('/api/register')
-        .get((req, res) => {
+        .get((req: express.Request, res: express.Response) => {
             res.json({
                 error: 'need implement api register'
             });

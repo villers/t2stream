@@ -8,6 +8,7 @@ import * as Waterline from 'waterline';
 import {config} from './config/config';
 import {User} from './models/user';
 
+import {unauthorized, forbidden, badRequest, genericError, pageNotFound} from './middlewares/error';
 import {isAuthenticated} from './middlewares/isAuthenticated';
 
 import {anonymousRoutes} from './routes/anonymous';
@@ -35,14 +36,24 @@ app.use(bodyParser.json());
 // Load static file folder
 app.use(express.static(__dirname + '/public/'));
 
-// Add route in app
+// Add anonymous routes in app
 app.use('/', [
     anonymousRoutes()
 ]);
 
+// Add authenticated routes in app
 app.use('/api', [
     isAuthenticated,
     authenticatedRoutes()
+]);
+
+// Add error handler
+app.use([
+    unauthorized,
+    forbidden,
+    badRequest,
+    genericError,
+    pageNotFound
 ]);
 
 // Initialize orm with database config and start server.
