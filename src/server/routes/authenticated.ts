@@ -1,12 +1,12 @@
 'use strict';
 
-import * as express from 'express';
+import {Router, Request, Response} from 'express';
 
 export function authenticatedRoutes() {
-    let router = express.Router();
+    let router = Router();
 
     router.route('/logout')
-        .get((req: express.Request, res: express.Response) => {
+        .get((req: Request, res: Response) => {
             res.json({
                 error: 'need implement api logout'
             });
