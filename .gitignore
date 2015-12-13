@@ -33,5 +33,5 @@ bower_components
 
 #build
 dist
-typings
+/typings
 data.sqlite3
