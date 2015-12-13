@@ -1,9 +1,9 @@
 'use strict';
 
-import * as express from 'express';
+import {Request, Response} from 'express';
 import {codes, createError} from '../helpers/error';
 
-export function unauthorized(err, req: express.Request, res: express.Response, next: Function) {
+export function unauthorized(err, req: Request, res: Response, next: Function) {
     if (err.status !== codes.unauthorized) {
         return next(err);
     }
@@ -15,7 +15,7 @@ export function unauthorized(err, req: express.Request, res: express.Response, n
     });
 }
 
-export function forbidden(err, req: express.Request, res: express.Response, next: Function) {
+export function forbidden(err, req: Request, res: Response, next: Function) {
     if (err.status !== codes.forbidden) {
         return next(err);
     }
@@ -27,7 +27,7 @@ export function forbidden(err, req: express.Request, res: express.Response, next
     });
 }
 
-export function badRequest(err, req: express.Request, res: express.Response, next: Function) {
+export function badRequest(err, req: Request, res: Response, next: Function) {
     if (err.status !== codes.badRequest) {
         return next(err);
     }
@@ -39,7 +39,7 @@ export function badRequest(err, req: express.Request, res: express.Response, nex
     });
 }
 
-export function genericError(err, req: express.Request, res: express.Response, next: Function) {
+export function genericError(err, req: Request, res: Response, next: Function) {
     res.status(codes.genericError).send({
         success: false,
         message: err.message || 'Internal server error.',
@@ -47,7 +47,7 @@ export function genericError(err, req: express.Request, res: express.Response, n
     });
 }
 
-export function pageNotFound(req: express.Request, res: express.Response, next: Function) {
+export function pageNotFound(req: Request, res: Response, next: Function) {
     res.status(codes.pageNotFound).send({
         success: false,
         message: 'Page not found.'

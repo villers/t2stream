@@ -1,10 +1,10 @@
 'use strict';
 
-import * as express from 'express';
+import {Request, Response} from 'express';
 import {codes, createError} from '../helpers/error';
 import {getTokenFromRequest, validateToken} from '../helpers/token';
 
-export function isAuthenticated(req: express.Request, res: express.Response, next: Function) {
+export function isAuthenticated(req: Request, res: Response, next: Function) {
     let token = getTokenFromRequest(req);
 
     // Token not exist
