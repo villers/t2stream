@@ -5,8 +5,7 @@ import {compare} from 'bcrypt';
 import {verify, sign} from 'jsonwebtoken';
 import {config} from '../config/config';
 import {User} from '../models/user';
-
-import {GetApplication, } from '../index';
+import {GetApplication} from '../index';
 
 export function getAccessToken(bearerToken: string, callback: (error: boolean | any, accessToken: any) => void) {
     verify(bearerToken, config.token.secret, {issuer: config.token.issuer}, (err: Error, decoded: any) => {
@@ -45,7 +44,7 @@ export function getUser(username: string, password: string, callback: (error: bo
 }
 
 export function generateToken(type: string, req: Request, callback: (error: boolean, object: any) => void) {
-	let User = req.user;
+    let User = req.user;
     User.Type = type;
     let Token = sign(User, config.token.secret, { expiresIn: config.token.expiresInSeconds, issuer: config.token.issuer });
     if (type === 'accessToken') {
