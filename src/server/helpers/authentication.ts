@@ -11,10 +11,10 @@ import {GetApplication} from '../index';
 export function getAccessToken(bearerToken: string, callback: (error: boolean | any, accessToken: any) => void) {
 	jwt.verify(bearerToken, config.token.secret, {issuer: config.token.issuer}, (err: Error, decoded: any) => {
 		if (err) {
-			callback(err, null);
+			callback(false, null);
 		}
 		if (decoded.Type !== 'accessToken') {
-			callback({'Message':'a valid accesstoken is required'}, null);
+			callback(false, null);
 		}
 		callback(false, decoded);
 	});
@@ -32,9 +32,15 @@ export function getUser(username: string, password: string, callback: (error: bo
 	let ModelUsers = GetApplication().models.user;
 	ModelUsers.findOne({username: username}).exec((err, model) => {
 		if (err) {
-			callback(err, null);
+			callback(false, null);
 		}
-		callback(false, model);
+		bcrypt.compare(password, model.password, (err: Error, same: boolean) => {
+			if (same) {
+				callback(false, model);
+			} else {
+				callback(false, null);
+			}
+		});
 	});
 };
 
