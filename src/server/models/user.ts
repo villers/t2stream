@@ -24,11 +24,9 @@ export const User = Waterline.Collection.extend({
             defaultsTo: false
         },
         toJSON() {
-            return {
-                id: this.id,
-                username: this.username,
-                isAdmin: this.isAdmin
-            };
+            var obj = this.toObject();
+            delete obj.password;
+            return obj;
         }
     }
 });

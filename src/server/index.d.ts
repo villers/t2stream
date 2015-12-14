@@ -9,10 +9,13 @@
 
 ///<reference path="helpers/error.ts"/>
 ///<reference path="helpers/token.ts"/>
+///<reference path="helpers/authentication.ts"/>
 
 ///<reference path="middlewares/error.ts"/>
 ///<reference path="middlewares/isAuthenticated.ts"/>
 
 ///<reference path="routes/anonymous.ts"/>
 ///<reference path="routes/authenticated.ts"/>
+
+///<reference path="db/seed.ts"/>
 

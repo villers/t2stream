@@ -14,9 +14,21 @@ import {isAuthenticated} from './middlewares/isAuthenticated';
 import {anonymousRoutes} from './routes/anonymous';
 import {authenticatedRoutes} from './routes/authenticated';
 
+import {Seed} from './db/seed';
+
+let oauthServer = require('oauth2-server');
+
 // Init express app
 let app: any = express();
 let port: number = config.server.port;
+app.oauth = oauthServer({
+   model: require('./helpers/authentication'),
+   grants: ['password'],
+   accessTokenLifetime: null,
+   refreshTokenLifetime: null,
+   authCodeLifetime: null,
+   debug: true
+});
 
 // Set token in app object.
 app.set('token-secret', config.token.secret);
@@ -35,6 +47,8 @@ app.use(bodyParser.json());
 
 // Load static file folder
 app.use(express.static(__dirname + '/public/'));
+
+app.all('/oauth/token', app.oauth.grant());
 
 // Add anonymous routes in app
 app.use('/', [
@@ -65,9 +79,14 @@ orm.initialize(config.database, function (err: waterline.WLError, models: any) {
     // Add orm connections and models
     app.models = models.collections;
     app.connections = models.connections;
+    Seed(app.models);
 
     // Start the server.
     app.listen(port);
 
     console.log(`Server started at port ${port}`);
 });
+
+export function GetApplication() {
+    return app;
+}

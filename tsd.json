@@ -45,7 +45,7 @@
       "commit": "0ea013a775ce1fb90c5e41b255e1d038714ffbe5"
     },
     "node/node.d.ts": {
-      "commit": "5a8fc5ee71701431e4fdbb80c506e3c13f85a9ff"
+      "commit": "8ea42cd8bb11863ed6f242d67c502288ebc45a7b"
     },
     "express/express.d.ts": {
       "commit": "5a8fc5ee71701431e4fdbb80c506e3c13f85a9ff"
@@ -55,6 +55,9 @@
     },
     "body-parser/body-parser.d.ts": {
       "commit": "5a8fc5ee71701431e4fdbb80c506e3c13f85a9ff"
+    },
+    "jsonwebtoken/jsonwebtoken.d.ts": {
+      "commit": "8ea42cd8bb11863ed6f242d67c502288ebc45a7b"
     }
   }
 }
