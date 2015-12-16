@@ -48,3 +48,4 @@ export function generateToken(type: string, User: any): Promise<{}> {
 		resolve(Token);
 	});
 }
+

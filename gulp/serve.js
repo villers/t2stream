@@ -10,7 +10,7 @@ module.exports = {
     nodemon: function (cb) {
         return nodemon({
             verbose: true,
-            script: 'Index.js',
+            script: 'index.js',
             watch: ['**/*.js'],
             ignore: ['public'],
             cwd: __dirname + '/../dist/'
