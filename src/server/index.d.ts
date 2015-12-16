@@ -8,7 +8,6 @@
 /// <reference path="models/user.ts" />
 
 ///<reference path="helpers/error.ts"/>
-///<reference path="helpers/token.ts"/>
 ///<reference path="helpers/authentication.ts"/>
 
 ///<reference path="middlewares/error.ts"/>
@@ -16,4 +15,3 @@
 ///<reference path="routes/oauth.ts"/>
 
 ///<reference path="db/seed.ts"/>
-

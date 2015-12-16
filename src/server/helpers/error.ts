@@ -21,11 +21,10 @@ export const GenericsErrorCode = {
 };
 
 export function createError(status: number = codes.genericError, msg: string = 'Error',
-    error_description: string = GenericsErrorCode.GENERICS_ERROR): ICustomError {
+                            error_description: string = GenericsErrorCode.GENERICS_ERROR): ICustomError {
     let customError: ICustomError = new Error(msg);
     customError.status = status;
     customError.error_description = error_description;
 
     return customError;
 }
-
