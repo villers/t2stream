@@ -9,9 +9,8 @@ export function unauthorized(err, req: Request, res: Response, next: Function) {
     }
 
     res.status(codes.unauthorized).send({
-        success: false,
-        message: err.message || 'Unauthorized.',
-        error: err
+        error: err.message || 'Unauthorized.',
+        error_description: err.error_description || err.message || 'Unauthorized.'
     });
 }
 
@@ -21,9 +20,8 @@ export function forbidden(err, req: Request, res: Response, next: Function) {
     }
 
     res.status(codes.forbidden).send({
-        success: false,
-        message: err.message || 'Forbidden.',
-        error: err
+        error: err.message || 'Forbidden.',
+        error_description: err.error_description || err.message || 'Forbidden.'
     });
 }
 
@@ -33,23 +31,20 @@ export function badRequest(err, req: Request, res: Response, next: Function) {
     }
 
     res.status(codes.badRequest).send({
-        success: false,
-        message: err.message || 'Bad Request',
-        error: err
+        error: err.message || 'Bad Request',
+        error_description: err.error_description || err.message || 'Bad Request'
     });
 }
 
 export function genericError(err, req: Request, res: Response, next: Function) {
     res.status(codes.genericError).send({
-        success: false,
-        message: err.message || 'Internal server error.',
-        error: err
+        error: err.message || 'Internal server error.',
+        error_description: err.error_description || err.message || 'Internal server error.'
     });
 }
 
 export function pageNotFound(req: Request, res: Response, next: Function) {
     res.status(codes.pageNotFound).send({
-        success: false,
-        message: 'Page not found.'
+        error: 'Page not found.'
     });
 }

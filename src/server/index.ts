@@ -9,26 +9,14 @@ import {config} from './config/config';
 import {User} from './models/user';
 
 import {unauthorized, forbidden, badRequest, genericError, pageNotFound} from './middlewares/error';
-import {isAuthenticated} from './middlewares/isAuthenticated';
-
-import {anonymousRoutes} from './routes/anonymous';
-import {authenticatedRoutes} from './routes/authenticated';
 
 import {Seed} from './db/seed';
 
-let oauthServer = require('oauth2-server');
+import {OAuthRoutes} from './routes/oauth';
 
 // Init express app
 let app: any = express();
 let port: number = config.server.port;
-app.oauth = oauthServer({
-   model: require('./helpers/authentication'),
-   grants: ['password'],
-   accessTokenLifetime: null,
-   refreshTokenLifetime: null,
-   authCodeLifetime: null,
-   debug: true
-});
 
 // Set token in app object.
 app.set('token-secret', config.token.secret);
@@ -46,20 +34,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Load static file folder
-app.use(express.static(__dirname + '/public/'));
+app.use('/', express.static(__dirname + '/public/'));
 
-app.all('/oauth/token', app.oauth.grant());
-
-// Add anonymous routes in app
-app.use('/', [
-    anonymousRoutes()
-]);
+app.use('/oauth', OAuthRoutes());
 
 // Add authenticated routes in app
-app.use('/api', [
-    isAuthenticated,
-    authenticatedRoutes()
-]);
+/*app.use('/api', [
+]);*/
 
 // Add error handler
 app.use([

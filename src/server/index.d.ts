@@ -12,10 +12,8 @@
 ///<reference path="helpers/authentication.ts"/>
 
 ///<reference path="middlewares/error.ts"/>
-///<reference path="middlewares/isAuthenticated.ts"/>
 
-///<reference path="routes/anonymous.ts"/>
-///<reference path="routes/authenticated.ts"/>
+///<reference path="routes/oauth.ts"/>
 
 ///<reference path="db/seed.ts"/>
 

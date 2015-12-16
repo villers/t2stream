@@ -29,7 +29,6 @@
     "lru-cache": "^3.2.0",
     "nconf": "^0.8.2",
     "node-uuid": "^1.4.7",
-    "oauth2-server": "^2.4.1",
     "sails-disk": "^0.10.8",
     "sails-mongo": "^0.11.5",
     "sails-mysql": "^0.11.2",
